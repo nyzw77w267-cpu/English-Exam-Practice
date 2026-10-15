@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "English Exam Practice · 学术英语翻译",
+  "short_name": "英语翻译复习",
+  "description": "基于课程讲义、无需账号的离线学术英语翻译练习",
+  "lang": "zh-CN",
+  "start_url": "./index.html#home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f3",
+  "theme_color": "#30634b",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

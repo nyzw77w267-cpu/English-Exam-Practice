@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#30634b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="英语翻译复习">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="基于课程讲义的学术英语翻译离线复习工具">
+  <title>English Exam Practice · 学术英语翻译</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data/bank.js"></script>
+  <script defer src="core.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="pwa.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="#home"><span class="brand-mark">E<span>p</span></span><span>English Exam<br><b>Practice</b></span></a>
+      <div class="course-label">学术英语翻译 · 期末复习</div>
+      <nav aria-label="主导航" id="nav"></nav>
+      <div class="sidebar-bottom"><span class="offline-dot"></span>离线学习空间<span class="version">v3.0</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span id="breadcrumb">学习概览</span><div class="top-actions"><span id="save-status" role="status">进度保存在此浏览器</span><button id="theme-button" class="icon-button" aria-label="切换深色模式" title="切换深色模式"></button></div></header>
+      <div id="storage-warning" class="storage-warning" role="alert" hidden></div>
+      <div class="pwa-bar"><span id="pwa-status" role="status">正在检查离线缓存…</span><div id="pwa-update" hidden><span>新版已缓存，可在完成考试后更新。</span><button class="secondary">保存进度并更新</button></div></div>
+      <main id="main" tabindex="-1"></main>
+      <footer>English Exam Practice <span>依据课程讲义整理 · 所有练习均可离线完成</span></footer>
+    </div>
+  </div>
+  <div id="toast" role="status" class="toast" hidden></div>
+  <dialog id="confirm-dialog"><form method="dialog"><h2 id="dialog-title"></h2><p id="dialog-message"></p><div class="button-row"><button value="cancel" class="secondary">取消</button><button value="ok" class="primary">确认</button></div></form></dialog>
+  <script>window.addEventListener('load',function(){if(!window.EXAM_BANK||!window.ExamCore){document.getElementById('main').innerHTML='<h1>本地文件未能完整加载</h1><p>请先解压整个文件夹，保留 data、assets、JS 和 CSS 文件，再打开 index.html。</p>';}});</script>
+</body>
+</html>
